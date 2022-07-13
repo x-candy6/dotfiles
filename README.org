@@ -26,7 +26,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 *** lsd 
 git clone https://github.com/Peltoche/lsd
 cargo install lsd
-
+export PATH=/home/USERNAME/.cargo/bin:$PATH
 
 *** Only if using clean vimrc
 set nocompatible              " be iMproved, required
