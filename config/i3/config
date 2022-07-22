@@ -38,6 +38,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+#Mod1 - Alt
+#Mod4 - WinKey
+
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
 set $up k
@@ -50,9 +53,14 @@ floating_modifier Mod4
 
 #remapping workspaces to proper monitors
 workspace 1  output DP-1
-workspace 3  output DVI-D-0
 workspace 2  output DP-1
-workspace 4  output DVI-D-0
+workspace 3  output DP-1
+workspace 4  output DP-1
+workspace 5  output DP-1
+workspace 6  output DVI-D-0
+workspace 7  output DVI-D-0
+workspace 8  output DVI-D-0
+workspace 9  output DVI-D-0
 
 #window gaps from i3-gaps
 gaps inner 10 
@@ -60,6 +68,7 @@ gaps outer  0
 # start a terminal
 # bindsym Mod4+Return exec i3-sensible-terminal
 bindsym Mod4+Return exec kitty 
+bindsym Mod4+equal exec firefox
 #bindsym +F1  exec 1password 
 #bindsym Mod4+F2  exec thunar
 #bindsym Mod4+F3  exec firefox
@@ -76,6 +85,10 @@ bindsym Mod4+shift+e exec --no-startup-id /home/andy/.config/rofi/bin/menu_power
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindsym Mod4+d exec --no-startup-id i3-dmenu-desktop
+
+#Change Opacity of active window
+bindsym Mod4+Mod1+j exec picom-trans -c -10
+bindsym Mod4+Mod1+k exec picom-trans -c +10
 
 # change focus
 bindsym Mod4+$left focus left
@@ -111,9 +124,9 @@ bindsym Mod4+bracketright split v
 bindsym Mod4+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym Mod4+8 layout stacking
-bindsym Mod4+9 layout tabbed
-bindsym Mod4+0 layout toggle split
+bindsym Mod4+Shift+q layout stacking
+bindsym Mod4+Shift+t layout tabbed
+bindsym Mod4+Shift+s layout toggle split
 
 # toggle tiling / floating
 bindsym Mod4+Shift+space floating toggle
@@ -123,7 +136,6 @@ bindsym Mod4+space focus mode_toggle
 
 
 for_window [class="Pavucontrol"] floating enable
-for_window [class="Spotify"] floating enable
 for_window [class="zoom"] floating enable
 for_window [class="NVIDIA Settings"] floating enable
 for_window [class="vmware"] floating enable
@@ -136,18 +148,28 @@ for_window [class="vlc"] floating enable
 for_window [class="Vmware"] floating enable
 for_window [class="discord"] floating enable
 for_window [class="drawio"] floating enable
-for_window [class="1Password"] floating enable
 for_window [class="Kazam"] floating enable
 for_window [class="Solaar"] floating enable
 for_window [class="ksnip"] floating enable
 for_window [class="steam"] floating enable
-for_window [class="dbeaver"] floating enable
 for_window [class="ristretto"] floating enable
-for_window [class="Thunar"] floating enable
+for_window [class="dbeaver"] floating enable
+for_window [class="konsole"] floating enable resize set 800 600
 for_window [class="wireshark"] floating enable
 for_window [class="install4j-burp-StartBurp"] floating enable
 for_window [class="sensible-browser"] floating enable
-for_window [class="xfce4-settings-manager"] floating enable
+for_window [class="sublime_text"] floating enable
+for_window [class="Lutris"] floating enable
+for_window [class="battle.net.exe"] floating enable
+for_window [class="Xfce4-settings-manager"] floating enable resize set 800 800
+for_window [class="Engrampa"] floating enable resize set 800 400
+for_window [class="1Password"] floating enable resize set 600 600
+for_window [class="Thunar"] floating enable resize set 800 600
+for_window [class="Spotify"] floating enable resize set 800 600
+for_window [class="Gpick"] floating enable resize set 800 600
+for_window [class="Lxappearance"] floating enable resize set 800 600
+for_window [class="xfce4-settings-manager"] floating enable resize set 800 600
+#
 # Unity
 for_window [class="^Unity$" title="^Starting Unity...$"] floating enable
 for_window [class="^Unity$" title="^Hold On$"] floating enable
@@ -172,10 +194,7 @@ for_window [class="^PacketTracer6$"] floating enable
 for_window [class="^PacketTracer6$" title="PT Activity"] floating disable
 for_window [class="^PacketTracer6$" title="Cisco Packet Tracer"] floating disable
 #Open windows in certain sizes
-for_window [class="1Password"] resize set 600 600
-for_window [class="Spotify"] resize set 800 600
-for_window [class="thunar"] resize set 800 600
-# focus the parent container
+#focus the parent container
 bindsym Mod4+a focus parent
 
 # focus the child container
@@ -209,9 +228,9 @@ bindsym Mod4+4 workspace number $ws4
 bindsym Mod4+5 workspace number $ws5
 bindsym Mod4+6 workspace number $ws6
 bindsym Mod4+7 workspace number $ws7
-#bindsym Mod4+8 workspace number $ws8
-#bindsym Mod4+9 workspace number $ws9
-#bindsym Mod4+0 workspace number $ws10
+bindsym Mod4+8 workspace number $ws8
+bindsym Mod4+9 workspace number $ws9
+bindsym Mod4+0 workspace number $ws10
 
 # move focused container to workspace
 bindsym Mod4+Shift+1 move container to workspace number $ws1
@@ -222,8 +241,8 @@ bindsym Mod4+Shift+5 move container to workspace number $ws5
 bindsym Mod4+Shift+6 move container to workspace number $ws6
 bindsym Mod4+Shift+7 move container to workspace number $ws7
 bindsym Mod4+Shift+8 move container to workspace number $ws8
-bindsym Mod4+Shift+0 move container to workspace number $ws10
 bindsym Mod4+Shift+9 move container to workspace number $ws9
+bindsym Mod4+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
 bindsym Mod4+Shift+c reload
@@ -260,10 +279,10 @@ bindsym Mod4+r mode "resize"
 #disable title bar in-lieu of polybar
 client.focused #c4c4c4 #c4c4c4 #c4c4c4 #c4c4c4 
 #client.focused #00FFFF #00FFFF #00FFFF #00FFFF
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 
-bindsym Mod4+alt+shift+s exec i3-save-tree --workspace 1 > ~/.i3/workspace-1.json
-bindsym Mod4+alt+shift+r exec append_layout ~/.workspace-1.json
+bindsym Mod4+Mod1+shift+s exec i3-save-tree --workspace 1 > ~/.i3/workspace-1.json
+bindsym Mod4+Mod1+shift+r exec append_layout ~/.workspace-1.json
 
 ######################################################################
 # automatically start i3-config-wizard to offer the user to create a
