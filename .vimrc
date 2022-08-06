@@ -3,7 +3,7 @@
 "░░▀░░▀▀▀░▀░▀░░░▀▀▀░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀
 
 "Created by: Andrewc
-"Version: 1.5.0
+"Version: 1.5.6
 
 "vim7+ default plugin-manager
 packloadall
