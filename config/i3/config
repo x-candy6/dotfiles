@@ -62,6 +62,7 @@ workspace 7  output DVI-D-0
 workspace 8  output DVI-D-0
 workspace 9  output DVI-D-0
 
+
 #window gaps from i3-gaps
 gaps inner 10 
 gaps outer  0
@@ -69,6 +70,7 @@ gaps outer  0
 # bindsym Mod4+Return exec i3-sensible-terminal
 bindsym Mod4+Return exec kitty 
 bindsym Mod4+equal exec firefox
+bindsym Mod4+apostrophe exec thunar 
 #bindsym +F1  exec 1password 
 #bindsym Mod4+F2  exec thunar
 #bindsym Mod4+F3  exec firefox
@@ -135,6 +137,7 @@ bindsym Mod4+Shift+space floating toggle
 bindsym Mod4+space focus mode_toggle
 
 
+
 for_window [class="Pavucontrol"] floating enable
 for_window [class="zoom"] floating enable
 for_window [class="NVIDIA Settings"] floating enable
@@ -193,6 +196,10 @@ for_window [title="^Steam Keyboard$"] floating enable
 for_window [class="^PacketTracer6$"] floating enable
 for_window [class="^PacketTracer6$" title="PT Activity"] floating disable
 for_window [class="^PacketTracer6$" title="Cisco Packet Tracer"] floating disable
+
+#JFLAP
+for_window [class="sun-awt-X11-XFramePeer"] floating enable resize set 800 600
+
 #Open windows in certain sizes
 #focus the parent container
 bindsym Mod4+a focus parent
@@ -305,3 +312,6 @@ exec bash /home/andy/.config/polybar/launch.sh --blocks
 exec /etc/startupCommands.bash
 exec picom --experimental-backends --backend glx --xrender-sync-fence &
 exec ksnip
+exec sudo ufw enable
+#for powersaver and screensaver
+exec xset s off && xset -dpms 

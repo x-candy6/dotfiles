@@ -119,6 +119,7 @@ endif
 "kkruby candycode clue cobalt2 cobalt crunchbang cthulhian deepsea  derefined
 "dw_purple dw_yellow dzo 
 
+"colorscheme seoul256-light 
 colorscheme ecostation    
 "below fixes some transparency issues with picom
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
@@ -239,7 +240,7 @@ let g:prettier#autoformat_require_pragma = 0
 " Max line length that prettier will wrap on: a number or 'auto' (use
 " textwidth).
 " default: 'auto'
-let g:prettier#config#print_width = '120'
+let g:prettier#config#print_width = '512'
 
 " number of spaces per indentation level: a number or 'auto' (use
 " softtabstop)
