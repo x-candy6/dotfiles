@@ -1,0 +1,58 @@
+#+TITLE:Java - F22 - Review
+#+AUTHOR:AndrewC
+#+DESCRIPTION:This is to review concepts for Java.
+#+DATE:<2022-08-23 Tue>
+
+
+* Overview
+  These next few projects are for reviewing the java that's needed for Fall 2022.
+
+  I need to review the features of java in order to know the roadmap.
+  https://www.tutorialspoint.com/What-are-the-major-features-of-Java-programming
+
+
+  + TODO Object Orientated
+    - Class
+    - Object
+    - Method, Method Passing
+
+    - Abstraction
+    - Encapsulation
+    - Inheritance
+    - Polymorphism
+
+    - Polymorphism
+    - Inheritance
+    - Encapsulation
+    - Object
+    - Class
+    - Abstraction
+      
+  + Multi-threaded
+  + Interpreted
+  + Distributed
+  + Dynamic
+
+  + ❌Platform Independent
+  + ❌Simple
+  + ❌Secure
+  + ❌Architecture-neutral
+  + ❌Portable
+  + ❌Robust
+  + ❌High Performance
+
+  ------
+
+  Networking Concepts
+  Java.net
+
+
+* <2022-08-23 Tue> Socket Programming
+** Client-Server Model
+   TCP/IP stack <-> Ethernet <-> TCP/IP stack
+   
+** Byte Order 
+** TCP Socket API
+** Concurrent Server Design
+** Client/Server Program
+

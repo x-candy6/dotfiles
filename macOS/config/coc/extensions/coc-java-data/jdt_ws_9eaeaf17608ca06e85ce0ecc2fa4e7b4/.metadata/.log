@@ -1,0 +1,258 @@
+!SESSION 2022-08-26 10:24:17.290 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Command-line arguments:  -data /Users/andy/.config/coc/extensions/coc-java-data/jdt_ws_9eaeaf17608ca06e85ce0ecc2fa4e7b4
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:17.959
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.058
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.088
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.088
+!MESSAGE Initializing Java Language Server 1.15.0.202208111822
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.861
+!MESSAGE Default VM Install changed from  null to net.temurin.17.jdk-/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.874
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.874
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.878
+!MESSAGE Wait for AutoBuildOffJob start
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.890
+!MESSAGE Wait for AutoBuildOffJob end 11ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.890
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.891
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.891
+!MESSAGE ProjectRegistryRefreshJob finished 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.891
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.901
+!MESSAGE Started org.eclipse.buildship.core 10ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.912
+!MESSAGE LoadingGradleVersionJob finished 11ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.925
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.934
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:18.968
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.361
+!MESSAGE Try to create an invisible project for the workspace /Users/andy/dev/current/java/015/main/server
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.362
+!MESSAGE Creating the Java project server_5d142638
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.372
+!MESSAGE Finished creating the Java project server_5d142638
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.376
+!MESSAGE Successfully created a workspace invisible project server_5d142638
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.393
+!MESSAGE Workspace initialized in 480ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.424
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.425
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.430
+!MESSAGE >> New configuration: {java={enabled=true, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=warning}}, configuration={checkProjectSettingsExclusions=true, updateBuildConfiguration=interactive, runtimes=[]}, trace={server=off}, import={gradle={enabled=true, wrapper={enabled=true}, offline={enabled=false}}, maven={enabled=true}, exclusions=[**/node_modules/**, **/.metadata/**, **/archetype-resources/**, **/META-INF/maven/**]}, maven={updateSnapshots=false, downloadSources=false}, referencesCodeLens={enabled=false}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true, comments={enabled=true}, onType={enabled=true, fixComment={enabled=true}}}, saveActions={organizeImports=false}, project={referencedLibraries=[lib/**/*.jar], resourceFilters=[node_modules, .git]}, autobuild={enabled=true}, maxConcurrentBuilds=1.0, completion={maxResults=0.0, enabled=true, overwrite=true, guessMethodArguments=false, favoriteStaticMembers=[org.junit.Assert.*, org.junit.Assume.*, org.junit.jupiter.api.Assertions.*, org.junit.jupiter.api.Assumptions.*, org.junit.jupiter.api.DynamicContainer.*, org.junit.jupiter.api.DynamicTest.*, org.mockito.Mockito.*, org.mockito.ArgumentMatchers.*, org.mockito.Answers.*], filteredTypes=[java.awt.*, com.sun.*], importOrder=[java, javax, com, org]}, progressReports={enabled=true}, foldingRange={enabled=true}, codeGeneration={hashCodeEquals={useJava7Objects=false, useInstanceof=false}, useBlocks=false, generateComments=false, toString={template=${object.className} [${member.name()}=${member.value}, ${otherMembers}], codeStyle=STRING_CONCATENATION, skipNullValues=false, listArrayContents=true, limitElements=0.0}}, selectionRange={enabled=true}, sources={organizeImports={starThreshold=99.0, staticStarThreshold=99.0}}, templates={fileHeader=[], typeComment=[]}, references={includeAccessors=true}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.431
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.448
+!MESSAGE >> Updating classpath for project server_5d142638
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.725
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.819
+!MESSAGE begin problem for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.819
+!MESSAGE 0 problems reported for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.821
+!MESSAGE Validated 1. Took 86 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.838
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.840
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.841
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:19.842
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:47.607
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:47.671
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:48.088
+!MESSAGE begin problem for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:48.088
+!MESSAGE 0 problems reported for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:48.089
+!MESSAGE Validated 1. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:59.741
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:24:59.801
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:25:00.214
+!MESSAGE begin problem for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:25:00.215
+!MESSAGE 0 problems reported for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:25:00.215
+!MESSAGE Validated 1. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:25:00.955
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:25:00.961
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:25:01.260
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:25:01.321
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:25:01.732
+!MESSAGE begin problem for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:25:01.733
+!MESSAGE 0 problems reported for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:25:01.733
+!MESSAGE Validated 1. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:07.155
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:07.163
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:07.575
+!MESSAGE begin problem for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:07.575
+!MESSAGE 0 problems reported for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:07.576
+!MESSAGE Validated 1. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:08.152
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:08.209
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:08.674
+!MESSAGE begin problem for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:08.674
+!MESSAGE 0 problems reported for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:08.675
+!MESSAGE Validated 1. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:09.109
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:09.165
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:09.422
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:09.428
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:09.840
+!MESSAGE begin problem for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:09.841
+!MESSAGE 0 problems reported for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:09.841
+!MESSAGE Validated 1. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:16.144
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:16.150
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:16.565
+!MESSAGE begin problem for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:16.565
+!MESSAGE 0 problems reported for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:16.566
+!MESSAGE Validated 1. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:17.693
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:17.700
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:18.054
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:18.060
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:18.473
+!MESSAGE begin problem for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:18.474
+!MESSAGE 0 problems reported for /menu.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:18.474
+!MESSAGE Validated 1. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:20.261
+!MESSAGE >> document/willSaveWaitUntil
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-08-26 10:27:20.291
+!MESSAGE >> document/didClose
