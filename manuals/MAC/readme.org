@@ -26,5 +26,13 @@
 * Misc Programs
 ** Starship
 ** lsd
+** rclone
+   build rclone from the site
+   Make a mount point
+   sudo rclone mount --daemon --allow-other --vfs-read-chunk-size=32M --poll-interval 15s --vfs-cache-mode writes --disable About andwhycho: /Users/andy/cloud/andwhycho
+   
+
+
   
+
 
