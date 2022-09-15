@@ -219,7 +219,14 @@ Glaive codefmt plugin[mappings]
 Glaive codefmt google_java_executable="java -jar /Users/andy/.config/google-java-format-1.15.0-all-deps.jar"
 
 
-autocmd FileType java setlocal shiftwidth=2 softtabstop=2 expandtab
+" Folding
+"za, zo, left, shift+j 
+
+autocmd FileType java setlocal shiftwidth=4 softtabstop=4 expandtab foldmethod=syntax 
+
+" Templates
+nmap <leader>t :TemplateInit 
+nmap <leader>ti :! ls -a $HOME/.vim/templates/ <CR>
 
 "PYTHON CONFIGS
 let g:pymode = 1
@@ -235,9 +242,12 @@ let g:pymode_indent_hanging_width = 4
 let g:pymode_folding = 0
 let g:pymode_virtualenv = 1
 let g:pymode_run_bind = '<leader>r'
+
 "Use F4 to run python script
 "autocmd FileType python map <buffer> <F4> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 "autocmd FileType python imap <buffer> <F4> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+
 "Pymode Code-checking
 let g:pymode_lint = 1
 let g:pymode_lint_on_write = 1
@@ -458,6 +468,7 @@ function! ShowDocumentation()
     call feedkeys('K', 'in')
   endif
 endfunction
+
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
