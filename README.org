@@ -1,3 +1,4 @@
+#+SETUPFILE: http://portalsf.surge.sh/static/org-themes/retro_dark/retro_dark.theme
 #+TITLE:DotFiles README
 #+AUTHOR:AndrewC
 #+DESCRIPTION:This repo contains my dotfiles. This readme includes scripts/urls/commands to run on a new system.
