@@ -1,0 +1,4 @@
+;;plantuml
+(setq org-plantuml-jar-path (expand-file-name "/Users/andy/.emacs.d/plugins/plantuml.jar"))
+(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
+(org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))

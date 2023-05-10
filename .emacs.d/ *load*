@@ -1,0 +1,46 @@
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+
+(setq initial-scratch-message "")
+(treemacs)
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+;;(treemacs)
+;;(load-theme 'nord t)
+;;(add-hook 'python-mode-hook 'jedi:setup)
+;;(setq jedi:complete-on-dot t)   
+
+;;(require 'org)
+;;(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+;; '(custom-enabled-themes '(light-blue))
+;; '(custom-safe-themes
+;;   '("0754c176c3f850e1f90e177e283247749a1ac688faebf05b6016343cb3f00064" default))
+;; '(package-selected-packages
+;;   '(jupyter jedi auto-complete elpy chess lsp-mode zweilight-theme zen-and-art-theme sublime-themes projectile pfuture nothing-theme northcode-theme nordless-theme nord-theme neotree hydra ht evil cfrs ace-window)))
+;; '(package-selected-packages
+;;  '(nord-theme nordless-theme northcode-theme nothing-theme projectile sr-speedbar evil sublime-themes zen-and-art-theme zweilight-theme))
+
+
+
+;;plantuml
+;;(setq org-plantuml-jar-path (expand-file-name "/Users/andy/.emacs.d/plugins/plantuml.jar"))
+;;(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
+;;(org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
+;;(setq plantuml-jar-path "/Users/andy/.emacs.d/plugins/plantuml.jar")
+
+
+
+;;(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+;; '(default ((t (:background nil))))
+
+;;(setq speedbar-show-all t)
