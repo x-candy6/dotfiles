@@ -1,0 +1,1 @@
+sudo apt install libpcre3-dev cmake libuv1-dev
