@@ -1,6 +1,0 @@
-#+TITLE:08-29-2022 CSC211 Notes
-#+AUTHOR:AndyC
-#+DESCRIPTION:Notes for CSC211
-#+DATE:<2022-08-29 Mon>
-
-

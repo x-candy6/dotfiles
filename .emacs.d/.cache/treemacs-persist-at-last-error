@@ -1,6 +1,0 @@
-# State when last error occurred on 2022-12-05 23:47:18
-# Error was (error Command attempted to use minibuffer while in minibuffer)
-
-* Default
-** single_page_app
- - path :: ~/dev/fall2022/664/project/single_page_app

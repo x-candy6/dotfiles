@@ -1,8 +1,0 @@
-* 
-
-
-
-
-browser.tabs.inTitlebar 2
-full-screen-api.ignore-widgets true
-

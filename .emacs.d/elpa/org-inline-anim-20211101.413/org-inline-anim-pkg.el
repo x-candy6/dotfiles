@@ -1,2 +1,0 @@
-;;; Generated package description from org-inline-anim.el  -*- no-byte-compile: t -*-
-(define-package "org-inline-anim" "20211101.413" "Inline playback of animated GIF/PNG for Org" '((emacs "25.3") (org "9.4")) :commit "1808574ff04ed66b7382247f3f13815fae2a4929" :authors '(("Shigeaki Nishina")) :maintainer '("Shigeaki Nishina") :keywords '("org" "outlines" "hypermedia" "multimedia") :url "https://github.com/shg/org-inline-anim.el")
