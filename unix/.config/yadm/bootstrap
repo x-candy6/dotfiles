@@ -1,0 +1,113 @@
+#!/bin/bash
+
+# Identify System and Package Manager
+## BEGIN
+declare -A osInfo;
+osInfo[/etc/redhat-release]=yum
+osInfo[/etc/arch-release]=pacman
+osInfo[/etc/gentoo-release]=emerge
+osInfo[/etc/SuSE-release]=zypp
+osInfo[/etc/debian_version]=apt 
+osInfo[/etc/alpine-release]=apk
+
+for f in ${!osInfo[@]}
+do
+    if [[ -f $f ]];then
+	pkg_manager=${osInfo[$f]}
+        echo Package manager: ${osInfo[$f]}
+    fi
+done
+
+system_type=$(uname -s)
+## END
+
+# Script Initialization
+cd "$HOME"
+echo "Initializing Submodules for ${system_type} system with ${pkg_manager} package manager..."
+
+# Installing submodules if not already installed...
+# Linux Systems
+if [ "$system_type" = "Linux" ]; then
+
+	# Debian-based distribution
+	if [ "$pkg_manager" = "apt " ]; then
+
+		# VIM
+		if ! command -v vim >/dev/null 2>&1; then
+			echo "Installing VIM"
+			sudo apt  install vim
+		fi
+
+		if ! test -e ~/.vim/autoload/plug.vim; then
+			curl --create-dirs -fsSLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim
+			vim -c "autocmd VimEnter * silent! PlugInstall"
+		fi
+
+		if ! command -v emacs >/dev/null 2>&1; then
+			echo "Installing Emacs"
+			sudo apt  install emacs
+		fi
+
+		if ! command -v emacs >/dev/null 2>&1; then
+			echo "Installing Emacs"
+			sudo apt  install emacs
+		fi
+
+		if ! command -v polybar >/dev/null 2>&1; then
+			echo "Installing Polybar"
+			sudo apt  install Polybar
+		fi
+
+		if ! command -v polybar >/dev/null 2>&1; then
+			echo "Installing Polybar"
+			sudo apt  install Polybar
+		fi
+
+		if ! command -v i3 >/dev/null 2>&1; then
+			echo "Installing i3"
+			sudo apt  install i3
+		fi
+
+		if ! command -v picom >/dev/null 2>&1; then
+			echo "Installing picom"
+			sudo apt  install libconfig-dev libdbus-1-dev libegl-dev libev-dev libgl-dev libpcre2-dev libpixman-1-dev libx11-xcb-dev libxcb1-dev libxcb-composite0-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-glx0-dev libxcb-image0-dev libxcb-present-dev libxcb-randr0-dev libxcb-render0-dev libxcb-render-util0-dev libxcb-shape0-dev libxcb-util-dev libxcb-xfixes0-dev libxext-dev meson ninja-build uthash-dev libpcre3-dev cmake libuv1-dev
+			if ! test -e ~/UserInstalledApps/; then
+				mkdir ~/UserInstalledApps/
+				git clone https://github.com/ibhagwan/picom
+				cd ~/UserInstalledApps/picom/
+				meson setup --buildtype=release build
+				ninja -C build
+				ninja -C build install
+			fi
+
+		fi
+
+		if ! command -v tmux >/dev/null 2>&1; then
+			echo "Installing tmux"
+			sudo apt  install tmux
+		fi
+
+		if ! command -v ranger >/dev/null 2>&1; then
+			echo "Installing ranger"
+			sudo apt  install ranger 
+		fi
+
+
+		if ! test -e ~/.fonts/FiraCodeNerdFont-Regular.ttf; then
+			echo "Installing FiraCodeNerdFont"
+			cd $HOME/Downloads/
+			wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip
+			unzip FiraCode.zip -d ~/.fonts
+			fc-cache -fv
+		fi
+
+
+		if ! command -v ranger >/dev/null 2>&1; then
+			echo "Installing starship"
+			curl -sS https://starship.rs/install.sh | sh
+		fi
+
+	fi
+
+
+fi

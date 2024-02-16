@@ -1,0 +1,12 @@
+# State when last error occurred on 2023-10-13 11:01:41
+# Error was (error Command attempted to use minibuffer while in minibuffer)
+
+* Default
+** professional_site
+ - path :: ~/dev/current/professional_site/professional_site
+** c-andrew
+ - path :: //192.168.5.10/magenta/personal/c-andrew
+** Employment
+ - path :: ~/Google Drive/My Drive/Employment
+** captainslog
+ - path :: //192.168.5.10/magenta/personal/captainslog

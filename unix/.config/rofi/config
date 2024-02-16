@@ -1,0 +1,4 @@
+configuration {
+    dmenu-display-cmdline: true;
+
+}
