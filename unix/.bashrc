@@ -120,9 +120,9 @@ fi
 set -o vi
 setxkbmap -option caps:swapescape
 
-eval "$(zoxide init bash)"
-export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
-eval "$(starship init bash)"
-
-export TERMINFO="/usr/share/terminfo"
-eval "$(/home/x-candy6/anaconda3/bin/conda shell.bash hook)" 
+#eval "$(zoxide init bash)"
+#export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+#eval "$(starship init bash)"
+#
+#export TERMINFO="/usr/share/terminfo"
+#eval "$(/home/x-candy6/anaconda3/bin/conda shell.bash hook)" 
