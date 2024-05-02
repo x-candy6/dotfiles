@@ -51,7 +51,7 @@ noremap <Leader>p "*p
 noremap <Leader>Y "*Y
 noremap <Leader>P "*P
 
-" set backspace=indent,eol,start #adjust if needed
+set backspace=indent,eol,start #adjust if needed
 
 " LightLine Settings
 set laststatus=2
