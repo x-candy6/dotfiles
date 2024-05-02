@@ -1,15 +1,13 @@
-
-#[🐱>](bg:#DA627D fg:#000000)\
 format = """
-[🐱▶](bg:#DA627D fg:#000000)\
+[](#9A348E)\
 $os\
-tigertiger\
-(bg:#DA627D fg:#000000)\
+$username\
+[](bg:#DA627D fg:#9A348E)\
 $directory\
-(fg:#000000 bg:#FCA17D)\
+[](fg:#DA627D bg:#FCA17D)\
 $git_branch\
 $git_status\
-(fg:#000000 bg:#86BBD8)\
+[](fg:#FCA17D bg:#86BBD8)\
 $c\
 $elixir\
 $elm\
@@ -22,17 +20,15 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-(fg:#000000 bg:#06969A)\
+[](fg:#86BBD8 bg:#06969A)\
 $docker_context\
-(fg:#06969A bg:#33658A)\
+[](fg:#06969A bg:#33658A)\
 $time\
-[](fg:#86BBD8)\
-[\n](fg:#A4F644)\
-
+[ ](fg:#33658A)\
 """
 
 # Disable the blank line at the start of the prompt
-add_newline = true
+# add_newline = false
 
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
@@ -50,7 +46,7 @@ style = "bg:#9A348E"
 disabled = true # Disabled by default
 
 [directory]
-style = "bg:#DA627D fg:#000000"
+style = "bg:#DA627D"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -76,7 +72,7 @@ format = '[ $symbol ($version) ]($style)'
 [docker_context]
 symbol = " "
 style = "bg:#06969A"
-format = '[ $symbol $context ]($style) $path'
+format = '[ $symbol $context ]($style)'
 
 [elixir]
 symbol = " "
@@ -144,6 +140,6 @@ format = '[ $symbol ($version) ]($style)'
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#86BBD8 fg:#000000"
-format = '[ ♥ $time]($style)'
+style = "bg:#33658A"
+format = '[ ♥ $time ]($style)'
 
