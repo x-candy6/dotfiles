@@ -1,10 +1,4 @@
 " Install Vim-Plug
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 call plug#begin()
 
 Plug 'vim-autoformat/vim-autoformat'
@@ -19,15 +13,13 @@ Plug 'mhinz/vim-startify'
 
 " IDE Plugins
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-""" Frontend Development
+" Frontend Development
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'AndrewRadev/tagalong.vim'
 
-
-" Automatically format Nix files on save
-
 call plug#end()
+
 
 " Syntax Highlighting
 if has("syntax")
@@ -51,7 +43,7 @@ noremap <Leader>p "*p
 noremap <Leader>Y "*Y
 noremap <Leader>P "*P
 
-set backspace=indent,eol,start #adjust if needed
+set backspace=indent,eol,start 
 
 " LightLine Settings
 set laststatus=2

@@ -120,9 +120,36 @@ fi
 set -o vi
 setxkbmap -option caps:swapescape
 
-#eval "$(zoxide init bash)"
-#export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
-#eval "$(starship init bash)"
-#
-#export TERMINFO="/usr/share/terminfo"
-#eval "$(/home/x-candy6/anaconda3/bin/conda shell.bash hook)" 
+eval "$(zoxide init bash)"
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+eval "$(starship init bash)"
+
+export TERMINFO="/usr/share/terminfo"
+__conda_setup="$('/home/candr3w/Apps/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/candr3w/Apps/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/candr3w/Apps/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/candr3w/Apps/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+eval '
+            __main() {
+                local major="${BASH_VERSINFO[0]}"
+                local minor="${BASH_VERSINFO[1]}"
+
+                if ((major > 4)) || { ((major == 4)) && ((minor >= 1)); }; then
+                    source <(/usr/local/bin/starship init bash --print-full-init)
+                else
+                    source /dev/stdin <<<"$(/usr/local/bin/starship init bash --print-full-init)"
+                fi
+            }
+            __main
+            unset -f __main
+            '
