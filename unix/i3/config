@@ -1,0 +1,116 @@
+# Set mod key (Mod4 is the Windows key)
+set $mod Mod4
+
+
+# Basic keybindings
+bindsym $mod+Return exec kitty 
+bindsym $mod+d exec --no-startup-id rofi -show drun -drun-display-commands true -theme ~/.local/share/rofi/themes/rounded-nord-dark.rasi
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+r restart  
+bindsym $mod+Shift+e exec "i3-msg exit"  
+bindsym $mod+apostrophe exec --no-startup-id google-chrome-stable
+
+
+# Workspace switching
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# Window focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Window movement
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+Ctrl+h resize shrink width 35px  
+bindsym $mod+Ctrl+j resize shrink height 35px
+bindsym $mod+Ctrl+k resize grow height 35px 
+bindsym $mod+Ctrl+l resize grow width 35px 
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Opacity +/-
+bindsym $mod+Shift+Mod1+j exec picom-trans -c -10
+bindsym $mod+Shift+Mod1+k exec picom-trans -c +10
+
+# Layout toggles
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s splith
+bindsym $mod+v splitv
+bindsym $mod+e layout toggle split
+
+# Gaps (requires i3-gaps)
+client.focused          #00FFFF #285577 #ffffff #2e9ef4
+client.focused_inactive #333333 #5f676a #ffffff #484e50
+client.unfocused        #333333 #222222 #888888 #292d2e
+client.urgent           #2f343a #900000 #ffffff #900000
+
+for_window [class=".*"] border pixel 4 
+gaps inner 15
+gaps outer 5
+gaps top  55
+
+
+# Launch picom (compositor for transparency)
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
+
+# Autostart programs
+exec --no-startup-id nm-applet  # Network manager
+exec --no-startup-id volumeicon  # Volume control
+
+exec_always --no-startup-id pkill polybar; polybar -c "$HOME/.config/polybar/default.ini" &
+# Toggle Polybar visibility
+bindsym $mod+Shift+p exec --no-startup-id ~/dev/scripts/toggle_polybar.sh
+
+# Wallpapers
+exec --no-startup-id feh --bg-scale --randomize ~/Pictures/Wallpapers/*
+bindsym $mod+Shift+b exec --no-startup-id feh --bg-fill --randomize ~/Pictures/Wallpapers/*
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+space floating toggle
+
+
+# Volume control using XF86WakeUp (keycode 151) + Up/Down
+bindsym Mod1+Up exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym Mod1+Down exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# Brightness control
+bindsym Mod1+Left exec --no-startup-id sudo brightnessctl set 10%-
+bindsym Mod1+Right exec --no-startup-id sudo brightnessctl set +10%
+
+
+
+# Media Capture: Screenshots/GIFs/Videos
+bindsym Print exec $HOME/dev/scripts/media_capture.sh
+bindsym Control+Print exec ~/dev/scripts/flameshot_capture.sh
+bindsym $mod+Control+Print exec sh -c "cd $HOME/Pictures/Screenshots && peek"
+bindsym $mod+Shift+Print exec sh -c 'kazam && mv ~/Videos/Kazam_*.mp4 ~/Videos/Screencasts/'
+
+
+# Remove border for Polybar
+for_window [class="Polybar"] border pixel 0
+
